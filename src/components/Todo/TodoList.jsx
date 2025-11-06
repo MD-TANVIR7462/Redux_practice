@@ -20,7 +20,17 @@ const TodoList = ({ id, description, name, isCompleted }) => {
       />
       <p>{name}</p>
       <p>{new Date().toLocaleDateString()}</p>
-      <p>{isCompleted?<p className="text-green-400 bg-green-200 px-2 rounded-md py-1 text-sm">Yes</p>:<p className="text-red-400 bg-red-200 px-2 rounded-md py-1 text-sm">No</p>}</p>
+      <p>
+        {isCompleted ? (
+          <p className="text-green-400 bg-green-200 px-2 rounded-md py-1 text-sm">
+            Yes
+          </p>
+        ) : (
+          <p className="text-red-400 bg-red-200 px-2 rounded-md py-1 text-sm">
+            No
+          </p>
+        )}
+      </p>
       <p>{description}</p>
       <div className="flex gap-2">
         <Button
